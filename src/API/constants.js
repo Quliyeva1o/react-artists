@@ -1,4 +1,4 @@
-const BASE_URL="https://json-deploy-delta.vercel.app"
+const BASE_URL="https://jsonvercel.vercel.app/"
 export const endpoints=
     {
         artist:"/artist"
