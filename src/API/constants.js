@@ -1,4 +1,4 @@
-const BASE_URL="https://jsonvercel.vercel.app/"
+const BASE_URL="https://json-server-vercel-one-sigma.vercel.app"
 export const endpoints=
     {
         artist:"/artist"
