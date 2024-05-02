@@ -8,8 +8,8 @@ const DeleteArtist = ({ artist, setArtists, artists }) => {
         <>
             <button className={`btn btn-danger `} onClick={
                 async () => {
-                    await delOne(endpoints.artist, artist.name);
-                    setArtists(artists.filter((x) => x.name !== artist.name))
+                    await delOne(endpoints.artist, artist.id);
+                    setArtists(artists.filter((x) => x.id !== artist.id))
                 }
             }
             >del</button>
