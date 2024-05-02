@@ -1,18 +1,18 @@
 import React from 'react'
 import { delOne } from '../../API/requests'
 import { endpoints } from '../../API/constants'
-// import styles from './index.module.scss'
+import { Button } from '@mui/material'
 
 const DeleteArtist = ({ artist, setArtists, artists }) => {
     return (
         <>
-            <button className={`btn btn-danger `} onClick={
+            <Button variant="contained" color="error"  onClick={
                 async () => {
                     await delOne(endpoints.artist, artist.id);
                     setArtists(artists.filter((x) => x.id !== artist.id))
                 }
             }
-            >del</button>
+            >del</Button>
         </>
     )
 }

@@ -9,6 +9,7 @@ import { getAll } from '../../API/requests';
 import { endpoints } from '../../API/constants';
 import { useEffect } from 'react';
 import DeleteArtist from '../Delete';
+import AddSong from '../AddSong';
 
 export default function MediaCard({ artists, setArtists }) {
   const getArtists = () => {
@@ -43,7 +44,8 @@ export default function MediaCard({ artists, setArtists }) {
           </CardContent>
           <CardActions>
            <DeleteArtist artist={artist} artists={artists} setArtists={setArtists}/>
-            <Button size="small">Add Song</Button>
+           <AddSong artist={artist} artists={artists} setArtists={setArtists}/>
+            
           </CardActions>
         </Card>
       ))}
