@@ -58,8 +58,8 @@ const AddSong = ({ artist, setArtists, artists }) => {
             releaseYear: e.target.value,
         })
         console.log(editArr[0]?.songs);
-      
-        addSong(endpoints.artist, myId, [...artist.songs, newSong]).then((res) => {
+      console.log(artist[0]);
+        addSong(endpoints.artist, myId, {...artist[0].songs,newSong}).then((res) => {
             console.log(res);
         });
         handleClose()
