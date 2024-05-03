@@ -59,7 +59,7 @@ const AddSong = ({ artist, setArtists, artists }) => {
         })
         console.log(editArr[0]?.songs);
       console.log(artist[0]);
-        addSong(endpoints.artist, myId, {...artist[0].songs,newSong}).then((res) => {
+        addSong(endpoints.artist, myId, [...artist.songs , newSong]).then((res) => {
             console.log(res);
         });
         handleClose()
